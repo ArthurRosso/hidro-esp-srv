@@ -30,10 +30,6 @@ $dia = date("d/m/Y");
 
 $sql = "INSERT INTO MEDICAO (mac, litros, hora, dia) VALUES ('$obj->Mac', '$obj->Litros', '$hora', '$dia');";
 
-if (pg_query($link, $sql)) {
-    echo"<script language='javascript' type='text/javascript'>alert('OK');window.location.href='index.php'</script>";
-} else {
-  echo"<script language='javascript' type='text/javascript'>alert('Problema');window.location.href='index.php'</script>";
-}
+pg_query($link, $sql);
 
 ?>
