@@ -40,19 +40,17 @@
                             echo "<table class='highlight centered responsive-table'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th>id</th>";
-                            echo "<th>Litros</th>";
-                            echo "<th>Hora</th>";
                             echo "<th>Data</th>";
+                            echo "<th>Hora</th>";
+                            echo "<th>Litros</th>";
                             echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
                             while ($row = pg_fetch_assoc($result)) {
                                 echo "<tr>";
-                                echo "<td>" . $row['_id'] . "</td>";
-                                echo "<td>" . $row['litros'] . "</td>";
-                                echo "<td>" . $row['hora'] . "</td>";
                                 echo "<td>" . $row['dia'] . "</td>";
+                                echo "<td>" . $row['hora'] . "</td>";
+                                echo "<td>" . $row['litros'] . "</td>";
                                 echo "</tr>";
                             }
                             echo "</tbody>";
