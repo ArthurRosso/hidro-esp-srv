@@ -34,7 +34,7 @@
                     require_once("config.php");
 
                     $var = $_COOKIE['mac'];
-                    $sql = "SELECT * FROM MEDICAO WHERE mac = '$var';";
+                    $sql = "SELECT * FROM MEDICAO WHERE mac = '$var' ORDER BY _id DESC;";
                     if ($result = pg_query($link, $sql)) {
                         if (pg_num_rows($result) > 0) {
                             echo "<table class='highlight centered responsive-table'>";
