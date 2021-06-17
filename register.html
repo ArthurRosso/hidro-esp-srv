@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
     
-        <title>Login</title>
+        <title>Registro</title>
     
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,14 +24,18 @@
                         <img style="height: 100px; width: 100px;" src="/hidro-esp-srv/static/icon.jpg" class="responsive-img">
                     </div>
                     <div class="col s6 left-align">
-                        <h4> Entrar </h4>
+                        <h4> Registro </h4>
                     </div>
                 </div>
                 <div class="row">
-                    <form method="POST" action="login.php">
+                    <form method="POST" action="register.php">
                         <div class="input-field col s12">
                             <input id="username" name="username" type="text" class="validate">
                             <label for="username">Nome de usuário</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="mac" name="mac" type="text" class="validate">
+                            <label for="mac">Endereço MAC</label>
                         </div>
                         <div class="input-field col s12">
                             <center>
@@ -41,11 +45,6 @@
                             </center>
                         </div>
                     </form>
-                </div>
-                <div class="row">
-                    <p>
-                        Novo por aqui? <a href="register.html">Registre-se</a> hoje!
-                    </p>
                 </div>
             </div>
         </div>

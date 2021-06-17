@@ -19,13 +19,20 @@ if($link === false){
     echo ("Could not connect");
 }
 
-$select = "CREATE TABLE IF NOT EXISTS MEDICAO ( 
-    _id SERIAL PRIMARY KEY,
-    mac VARCHAR (255) NOT NULL,
-    litros VARCHAR (255) NOT NULL,
-    hora VARCHAR (255) NOT NULL,
-    dia VARCHAR (255) NOT NULL
-)";
-pg_query($link, $select);
+$sql = "CREATE TABLE IF NOT EXISTS MEDICAO ( 
+            id SERIAL PRIMARY KEY,
+            mac VARCHAR (255),
+            litros VARCHAR (255),
+            hora VARCHAR (255),
+            dia VARCHAR (255)
+        );";
+pg_query($link, $sql);
+
+$sql = "CREATE TABLE IF NOT EXISTS USER_MAC ( 
+            id SERIAL PRIMARY KEY,
+            username VARCHAR (255),
+            mac VARCHAR (255)
+        );";
+pg_query($link, $sql);
 
 ?>
