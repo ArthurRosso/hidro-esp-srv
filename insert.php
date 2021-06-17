@@ -27,7 +27,12 @@ $obj = json_decode(file_get_contents('php://input'));
 date_default_timezone_set("America/Sao_Paulo");
 $hora = date("H:i:s");
 $dia = date("d/m/Y");
-
+/*
+$sql = "SELECT * FROM USER_MAC WHERE username = '$username';";
+$result = pg_query($link, $sql);
+$row = pg_fetch_assoc($result);
+$id = $row['id'];
+*/
 $sql = "INSERT INTO MEDICAO (mac, litros, hora, dia) VALUES ('$obj->Mac', '$obj->Litros', '$hora', '$dia');";
 
 pg_query($link, $sql);

@@ -29,12 +29,11 @@
                     ini_set('display_startup_errors', 1);
                     error_reporting(E_ALL);
 
-
                     // Include config file
                     require_once("config.php");
 
                     $var = $_COOKIE['mac'];
-                    $sql = "SELECT * FROM MEDICAO WHERE mac = '$var' ORDER BY _id DESC;";
+                    $sql = "SELECT * FROM MEDICAO WHERE mac = '$var' ORDER BY id DESC;";
                     if ($result = pg_query($link, $sql)) {
                         if (pg_num_rows($result) > 0) {
                             echo "<table class='highlight centered responsive-table'>";
